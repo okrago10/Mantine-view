@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint app components theme.ts",
+    "format:test": "oxfmt -c oxfmt.config.mjs --check \"**/*.{ts,tsx,css}\"",
+    "format:write": "oxfmt -c oxfmt.config.mjs --write \"**/*.{ts,tsx,css}\"",
+    "test": "npm run format:test && npm run lint && npm run typecheck"
   },
   "dependencies": {
     "@mantine/carousel": "9.6.3",
@@ -28,6 +32,9 @@
   "devDependencies": {
     "@types/node": "^26.6.5",
     "@types/react": "19.3.0",
+    "oxc-config-mantine": "^1.0.3",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.87.0",
     "postcss": "^8.5.29",
     "postcss-preset-mantine": "1.18.0",
     "postcss-simple-vars": "^7.0.1",
