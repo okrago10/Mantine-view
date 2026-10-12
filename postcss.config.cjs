@@ -1,16 +1,15 @@
+const breakpoints = require('./breakpoints.json');
+
 module.exports = {
   plugins: {
     'postcss-preset-mantine': {
       autoRem: true,
     },
     'postcss-simple-vars': {
-      variables: {
-        'mantine-breakpoint-xs': '36em',
-        'mantine-breakpoint-sm': '48em',
-        'mantine-breakpoint-md': '62em',
-        'mantine-breakpoint-lg': '75em',
-        'mantine-breakpoint-xl': '88em',
-      },
+      // theme.ts と同じ値を CSS Modules の $mantine-breakpoint-<名前> として使えるようにする
+      variables: Object.fromEntries(
+        Object.entries(breakpoints).map(([name, value]) => [`mantine-breakpoint-${name}`, value])
+      ),
     },
   },
 };
