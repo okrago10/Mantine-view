@@ -5,6 +5,7 @@ import '@mantine/dropzone/styles.css';
 import '@mantine/spotlight/styles.css';
 
 import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
+import { defaultColorScheme } from '@/theme';
 import { Providers } from './providers';
 
 export const metadata = {
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" {...mantineHtmlProps}>
       <head>
-        <ColorSchemeScript defaultColorScheme="auto" />
+        <ColorSchemeScript defaultColorScheme={defaultColorScheme} />
       </head>
       <body>
         <Providers>{children}</Providers>

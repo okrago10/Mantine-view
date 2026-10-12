@@ -41,7 +41,7 @@ http://localhost:3000 を開くと、導入確認用のページが表示され�
 | --- | --- |
 | `app/layout.tsx` | Mantine の CSS と `ColorSchemeScript` を読み込む |
 | `app/providers.tsx` | `MantineProvider` と code-highlight の Shiki アダプターを設定する（Client Component） |
-| `theme.ts` | Mantine のテーマ設定 |
+| `theme.ts` | Mantine のテーマ設定と既定のカラースキーム（`layout.tsx` と `providers.tsx` の両方が参照する） |
 | `postcss.config.cjs` | `postcss-preset-mantine` とブレークポイント変数の設定 |
 
 `@mantine/core` のコンポーネントはそのまま Server Component から使えます。`useMantineColorScheme` などの hooks を使うコンポーネントには `'use client'` を付けてください。
