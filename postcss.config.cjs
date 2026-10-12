@@ -6,7 +6,7 @@ module.exports = {
       autoRem: true,
     },
     'postcss-simple-vars': {
-      // theme.ts と同じ値を CSS Modules の $mantine-breakpoint-<名前> として使えるようにする
+      // breakpoints.json の各値から、CSS Modules で使う $mantine-breakpoint-<名前> を生成する
       variables: Object.fromEntries(
         Object.entries(breakpoints).map(([name, value]) => [`mantine-breakpoint-${name}`, value])
       ),
