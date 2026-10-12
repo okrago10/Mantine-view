@@ -1,6 +1,5 @@
-import './mantine-styles';
-
 import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
+import './mantine-styles';
 import { Providers } from './providers';
 
 export const metadata = {
