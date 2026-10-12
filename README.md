@@ -40,6 +40,7 @@ http://localhost:3000 を開くと、導入確認用のページが表示され�
 | パス | 役割 |
 | --- | --- |
 | `app/layout.tsx` | Mantine の CSS と `ColorSchemeScript` を読み込む |
+| `app/mantine-styles.ts` | `@mantine/core` と拡張パッケージの CSS を読み込む（パッケージを追加・削除したらここを編集する） |
 | `app/providers.tsx` | `MantineProvider` と code-highlight の Shiki アダプターを設定する（Client Component） |
 | `theme.ts` | Mantine のテーマ設定 |
 | `postcss.config.cjs` | `postcss-preset-mantine` とブレークポイント変数の設定 |
