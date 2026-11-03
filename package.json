@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint app components theme.ts",
+    "lint": "oxlint .",
     "format:test": "oxfmt -c oxfmt.config.mjs --check \"**/*.{ts,tsx,css}\"",
     "format:write": "oxfmt -c oxfmt.config.mjs --write \"**/*.{ts,tsx,css}\"",
     "test": "npm run format:test && npm run lint && npm run typecheck"
